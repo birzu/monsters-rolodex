@@ -1,0 +1,19 @@
+@import './sass/abstracts/variables';
+
+.App {
+  padding: 6rem 8vw;
+  background-image: $bg-gradient;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr);
+  grid-template-rows: 9.6rem max-content 1fr;
+
+  &__heading {
+    justify-self: center;
+    font-family: $font-title;
+    font-size: 8.4rem;
+    line-height: 1.2;
+    color: $color-app-heading;
+  }
+}
