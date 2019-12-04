@@ -1,0 +1,33 @@
+@import '../../sass/abstracts/variables';
+
+.Card {
+    width: 100%;
+    padding: 0 1.5rem 1.8rem 1.5rem;
+    background-color: $color-component-card-bg;
+    border-radius: .6rem;
+    box-shadow: 0 .8rem 1.4rem rgba(#000, .15);
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 1fr max-content min-content;
+    justify-items: center;
+    grid-row-gap: 1.5rem;
+    transform: translateZ(0);
+    transition: transform .4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    &:hover {
+        transform: translateZ(0) scale(1.1);
+    }
+
+
+    &__monster-name {
+        color: #101010;
+        font-size: 2.4rem;
+        backface-visibility: hidden;
+    }
+
+    &__monster-email {
+        font-size: 1.6rem;
+        color: #101010;
+        backface-visibility: hidden;
+    }
+}
