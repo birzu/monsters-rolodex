@@ -1,10 +1,12 @@
 @import '../../sass/abstracts/variables';
 
 .CardList {
+    padding-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(max-content, 25rem));
+    grid-template-columns: repeat(auto-fit, minmax(max-content, 30rem));
     justify-content: center;
     align-content: center;
     grid-column-gap: 3rem;
     grid-row-gap: 2.8rem;
+    border-top: 1px solid #333;
 }

@@ -1,0 +1,27 @@
+.SearchBox {
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    justify-self: center;
+    width: 20rem;
+    padding: 1.2rem 1.4rem 1.1rem 1.2rem;
+    background-color: #a2dede;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom .2s ease-out;
+
+
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid #4186ad;
+    }
+
+    &::-webkit-input-placeholder {
+        color: #387394;
+    }
+
+    &::placeholder {
+        color: #387394;
+    }
+}
+

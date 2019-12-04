@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CardList from './components/CardList/CardList.component';
+import SearchBox from './components/SearchBox/SearchBox.component';
 
 import './App.scss'
 
@@ -13,6 +14,10 @@ class App extends React.Component {
     }
   }
 
+  onSearchChange = event => {
+    this.setState( {searchField: event.target.value} );
+  }
+
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(res => res.json())
@@ -20,11 +25,15 @@ class App extends React.Component {
   }
 
   render() {
-    const { searchField, monsters } = this.state;
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster => {
+      return monster.name.toLowerCase().includes(searchField.toLowerCase());
+    })
     return (
       <div className="App">
         <h1 className="App__heading">Monster Rolodex</h1>
-        <CardList monsters={ monsters }/>
+        <SearchBox placeholder="search monsters" searchChange={this.onSearchChange}/>
+        <CardList monsters={ filteredMonsters }/>
       </div>
     )
   }
